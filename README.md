@@ -383,3 +383,20 @@ The underlying SAM 3 model weights and logic are subject to the [Meta SAM 3 Rese
 - [SAM3: Segment Anything with Concepts](https://github.com/facebookresearch/sam3)
 - [Original SAM3_Annotation_Tool by software-ai-life](https://github.com/software-ai-life/SAM3_Annotation_Tool)
 - [COCO Dataset Format](https://cocodataset.org/#format-data)
+
+## Inherited Features from the Original SAM3_Annotation_Tool
+
+This professional refactor retains the core functionality and workflow of the original [SAM3_Annotation_Tool](https://github.com/software-ai-life/SAM3_Annotation_Tool), including:
+
+- **Annotation Methods**: Text prompt, point prompt (add/remove), box selection, template matching, and manual polygon annotation.
+- **Fine Editing**: Drag control points, double-click to add points, and fixed-size control handles.
+- **Canvas Operations**: Mouse wheel zoom, middle-click pan, and pointer tool drag.
+- **Export Format**: COCO JSON + images ZIP export, including masks, bounding boxes, and categories.
+- **Auto Save**: Automatic saving to browser LocalStorage and recovery after unexpected closure.
+- **Copy & Paste, Multi-Select**: Standard keyboard shortcuts for annotation management.
+- **Category Management**: Quick category change, visual indication, and instant color update.
+- **Keyboard Shortcuts**: Tool switching, edit, selection, and canvas operations.
+- **Project Structure**: FastAPI backend, React + TypeScript frontend, Docker support, and Hugging Face/Meta SAM3 model integration.
+- **API Endpoints**: Upload, segment (text, points, box, template), export, and reset endpoints.
+
+All original annotation logic, data formats, and user workflows are preserved unless explicitly enhanced or replaced in this version.
