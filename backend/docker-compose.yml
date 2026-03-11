@@ -1,0 +1,19 @@
+services:
+  backend:
+    build:
+      context: ..
+      dockerfile: backend/Dockerfile
+    image: sam3-annotation-backend:latest
+    container_name: sam3-annotation-backend
+    ports:
+      - "8000:8000"
+    environment:
+      SAM3_CHECKPOINT_PATH: /app/sam3/sam3.pt
+      SAM3_MODEL_DIR: /app/sam3
+      SAM3_BPE_PATH: /opt/sam3/sam3/assets/bpe_simple_vocab_16e6.txt.gz
+      SAM3_GPU_INDEX: "0"
+      SAM3_EAGER_LOAD: "1"
+    volumes:
+      - ../sam3:/app/sam3 # Mount local sam3 directory to the container {sam3.pt & config.json}
+    gpus: all
+    restart: unless-stopped

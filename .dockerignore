@@ -1,0 +1,38 @@
+# Ignore everything by default
+**
+
+# Include backend source needed by image build
+!backend/
+!backend/app/
+!backend/app/**
+!backend/requirements.txt
+!backend/Dockerfile
+!backend/docker-compose.yml
+
+# Include frontend source needed by Vite build
+!frontend/
+!frontend/src/
+!frontend/src/**
+!frontend/public/
+!frontend/public/**
+!frontend/index.html
+!frontend/package.json
+!frontend/package-lock.json
+!frontend/vite.config.ts
+!frontend/tsconfig.json
+!frontend/tsconfig.node.json
+
+# Include packaged SAM3 model files for cloud deployments
+!sam3/
+!sam3/**
+
+# Exclude local dev/build artifacts
+backend/.venv/
+backend/venv/
+frontend/node_modules/
+frontend/dist/
+**/__pycache__/
+**/*.py[cod]
+**/.pytest_cache/
+**/.mypy_cache/
+**/.ruff_cache/

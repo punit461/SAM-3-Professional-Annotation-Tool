@@ -1,0 +1,24 @@
+# Ignore everything by default
+**
+
+# Include only what the backend image build needs
+!app/
+!app/**
+!requirements.txt
+!Dockerfile
+!docker-compose.yml
+!.dockerignore
+
+# Never send local model/checkpoint files in build context (mounted at runtime)
+sam3/*.pt
+sam3/*.pth
+sam3/*.bin
+
+# Exclude common caches/artifacts even under included paths
+**/__pycache__/
+**/*.py[cod]
+**/.pytest_cache/
+**/.mypy_cache/
+**/.ruff_cache/
+**/.venv/
+**/venv/
